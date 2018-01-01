@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Ajax.BeginForm("Hello", new AjaxOptions
+{
+    HttpMethod = "GET"
+    ,
+    InsertionMode = InsertionMode.Replace
+    ,
+    UpdateTargetId = "return-ajax1"
+    //,OnBegin = "OnBegin"
+    //,OnComplete = "OnComplete"
+    //,OnSuccess = "OnSuccess"
+    //,OnFailure = "OnFailure"
+}))
+{
+    @Html.TextBox("name")
+    <button type="submit">Submit</button>
+}
+<p></p>
+<p></p>
+<div id="return-ajax1">
+    回傳的資料將顯示在這裡
+</div>
+<p></p>
+<p></p>
+
+@using (Ajax.BeginForm("HelloPartialView", new AjaxOptions
+{
+    HttpMethod = "GET"
+    ,
+    InsertionMode = InsertionMode.Replace
+    ,
+    UpdateTargetId = "return-ajax2"
+    //,OnBegin = "OnBegin"
+    //,OnComplete = "OnComplete"
+    //,OnSuccess = "OnSuccess"
+    //,OnFailure = "OnFailure"
+}))
+{
+    @Html.TextBox("name")
+    <button type="submit">Submit</button>
+}
+<p></p>
+<p></p>
+<div id="return-ajax2">
+    回傳的資料將顯示在這裡
+</div>

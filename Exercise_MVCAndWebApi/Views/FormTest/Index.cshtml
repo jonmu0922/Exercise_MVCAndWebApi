@@ -1,0 +1,88 @@
+﻿@model Exercise_MVCAndWebApi.Models.UserModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<fieldset>
+    <legend>Normal Form</legend>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(o => Model.Name)
+            @Html.TextBoxFor(o => Model.Name)
+            @Html.ValidationMessageFor(o => Model.Name)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(o => Model.Age)
+            @Html.TextBoxFor(o => Model.Age)
+            @Html.ValidationMessageFor(o => Model.Age)
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    }
+</fieldset>
+
+
+<fieldset>
+    <legend>Ajax Form</legend>
+    @{ Html.EnableClientValidation(); }
+    @using (Ajax.BeginForm("AjaxAddUser", "FormTest", null, new AjaxOptions
+    {
+        HttpMethod = "Post"
+        //,InsertionMode = InsertionMode.Replace
+        //,UpdateTargetId = "return-ajax2"
+        //,OnBegin = "OnBegin"
+        //,OnComplete = "OnComplete"
+        ,
+        OnSuccess = "OnSuccess"
+        //,OnFailure = "OnFailure"
+    }, new { id = "ajaxform" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(o => Model.Name)
+            @Html.TextBoxFor(o => Model.Name)
+            @Html.ValidationMessageFor(o => Model.Name)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(o => Model.Age)
+            @Html.TextBoxFor(o => Model.Age)
+            @Html.ValidationMessageFor(o => Model.Age)
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    }
+</fieldset>
+
+@section scripts
+{
+    @*Ajax Form Validate 需要引入*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        function OnBegin() {
+
+        }
+
+        function OnComplete() {
+
+        }
+
+        function OnSuccess(result) {           
+            alert(JSON.stringify(result));
+            if (!result.Status)
+            {
+                var validator = $("#ajaxform").validate();
+                validator.showErrors(result.Errors);
+            }
+        }
+
+        function OnFailure(result) {
+            alert(JSON.stringify(result));
+        }
+    </script>
+}

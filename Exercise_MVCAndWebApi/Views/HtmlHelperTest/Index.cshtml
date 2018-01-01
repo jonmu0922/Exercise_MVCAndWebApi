@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@Html.Raw("<h1>hello world</h1>")
+
+
+@section scripts
+{
+    <script src="@(Url.Content("~/Scripts/jquery.validate.min.js" + "?_d=" + DateTime.Now.ToFileTimeUtc()))"></script>
+}
+    
