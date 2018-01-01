@@ -11,7 +11,7 @@
     {
         <div class="form-group">
             @Html.LabelFor(o => Model.Name)
-            @Html.TextBoxFor(o => Model.Name)
+            @Html.TextBoxFor(o => Model.Name, new { style = "width:400px;" })
             @Html.ValidationMessageFor(o => Model.Name)
         </div>
 

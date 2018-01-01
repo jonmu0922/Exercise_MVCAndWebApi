@@ -18,6 +18,15 @@ namespace Exercise_MVCAndWebApi
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
+            // 自訂Router
+            routes.MapRoute(
+                name: "ViewPost",
+                url: "Post/{id}",
+                defaults: new { controller = "Post", action = "ViewPost" },
+                constraints: new { id = @"\d+" }
+            );
         }
     }
 }

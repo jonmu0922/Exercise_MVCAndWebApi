@@ -94,10 +94,11 @@ namespace Exercise_MVCAndWebApi.Controllers
 
             // 根据 http 协议，StatusDescription 是写在 http header 中的，默认所有header是用iso-8859-1编码的，但是中文实际是用uft8编码。所以就出现了乱码问题。
 
-            return new HttpStatusCodeResult(HttpStatusCode.BadRequest, StringHelper.StringToISO_8859_1("伺服器無法了解需求")); //400
+            //return new HttpStatusCodeResult(HttpStatusCode.BadRequest, StringHelper.StringToISO_8859_1("伺服器無法了解需求")); //400
             //return new HttpStatusCodeResult(HttpStatusCode.InternalServerError);    //500
             //return new HttpStatusCodeResult(HttpStatusCode.ServiceUnavailable);     //503
-        }       
-        
+
+            return HttpNotFound();            
+        }               
     }
 }

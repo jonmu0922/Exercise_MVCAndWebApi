@@ -1,0 +1,35 @@
+﻿@model Exercise_MVCAndWebApi.Models.Login
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Index</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(o => Model.Account)
+        @Html.TextBoxFor(o => Model.Account, new { style = "width:400px;" })
+        @Html.ValidationMessageFor(o => Model.Account)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(o => Model.Password)
+        @Html.TextBoxFor(o => Model.Password)
+        @Html.ValidationMessageFor(o => Model.Password)
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+}
+
+<p>
+    <a href="~/authtest/checkauth">Check Auth</a>    
+</p>
+
+@section scripts
+{
+    @*Ajax Form Validate 需要引入*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
