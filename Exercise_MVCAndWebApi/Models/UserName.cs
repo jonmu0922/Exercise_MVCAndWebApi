@@ -13,6 +13,7 @@ namespace Exercise_MVCAndWebApi.Models
         [Required(ErrorMessage = "姓名未輸入")]
         public string Name { get; set; }
 
+
         [DisplayName("年齡")]
         [Required(ErrorMessage = "年齡未輸入")]
         [Range(0, 150, ErrorMessage = "年齡超過限制 0 ~ 150 之間")]
