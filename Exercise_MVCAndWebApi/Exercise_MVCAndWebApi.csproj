@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -102,7 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Test.mdf" />
     <Content Include="App_Data\test.txt" />
+    <Content Include="App_Data\Test_log.ldf">
+      <DependentUpon>Test.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -136,6 +143,7 @@
     <Compile Include="Class\Helper\LogHelper.cs" />
     <Compile Include="Class\Helper\StringHelper.cs" />
     <Compile Include="Controllers\ActionResultTestController.cs" />
+    <Compile Include="Controllers\AsyncTestController.cs" />
     <Compile Include="Controllers\AuthTestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HtmlHelperTestController.cs" />
@@ -145,6 +153,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,6 +171,7 @@
     <Content Include="Views\Home\_View.cshtml" />
     <Content Include="Views\AuthTest\Index.cshtml" />
     <Content Include="Views\AuthTest\CheckAuth.cshtml" />
+    <Content Include="Views\AsyncTest\Dapper.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

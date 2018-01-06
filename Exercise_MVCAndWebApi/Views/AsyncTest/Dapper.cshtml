@@ -1,0 +1,14 @@
+﻿@model  IEnumerable<Exercise_MVCAndWebApi.Models.User>
+
+@{
+    ViewBag.Title = "Dapper";
+}
+
+<h2>Dapper</h2>
+
+<ul>
+    @foreach (var u in Model)
+    {
+        <li>@u.Name (@u.Age)</li>
+    }
+</ul>

@@ -56,15 +56,12 @@ namespace Exercise_MVCAndWebApi.Controllers
         public ActionResult CheckAuth()
         {
             /*
-            要使用 
-             
-            [Authorize] 
-            
-            Web.Confi 要有設定
+            要使用 [Authorize]             
+            Web.Config 要有設定
             <authentication mode="Forms"></authentication>  or
-            <authentication mode="Windows"></authentication>             
-             
+            <authentication mode="Windows"></authentication>            
             */
+
             if (User.Identity.IsAuthenticated)
             {
                 ViewBag.IsAuthenticated = User.Identity.IsAuthenticated;
@@ -73,8 +70,7 @@ namespace Exercise_MVCAndWebApi.Controllers
             else
             {
                 ViewBag.IsAuthenticated = false;                
-            }
-            
+            }            
             
             return View();
         }
