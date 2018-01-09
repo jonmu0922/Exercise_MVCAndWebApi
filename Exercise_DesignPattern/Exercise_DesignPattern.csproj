@@ -45,12 +45,14 @@
     <Compile Include="Pattern\SimpleAbstractFactoryPattern.cs" />
     <Compile Include="Pattern\FactoryMethod.cs" />
     <Compile Include="Pattern\SimpleFactory.cs" />
+    <Compile Include="Pattern\Singleton.cs" />
     <Compile Include="Pattern\Strategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Note.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
