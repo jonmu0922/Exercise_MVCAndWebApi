@@ -17,6 +17,8 @@ namespace Exercise_DesignPattern
             //driver.Dirve(TransportType.Bike);
             //driver.Dirve(TransportType.Scooter);
 
+            //------------------------------------------------------------------------------------
+
             // FactoryMethod
             //ITeaFactory factory1 = new BlackTeaFactory();
             //ITeaFactory factory2 = new GreenTeaFactory();
@@ -27,6 +29,8 @@ namespace Exercise_DesignPattern
             //tea = factory2.CreateTea();
             //tea.Make();
 
+            //------------------------------------------------------------------------------------
+
             // Strategy
             //CashContext context = new CashContext(new ConcreteStrategyA());
             //context.ExecuteStrategy(100);
@@ -34,20 +38,21 @@ namespace Exercise_DesignPattern
             //context = new CashContext(new ConcreteStrategyB());
             //context.ExecuteStrategy(100);
 
+            //------------------------------------------------------------------------------------
+
             //簡單抽象工廠模式 Simple Abstract Factory Pattern
+            //Console.WriteLine(new Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.Bike().GetType().ToString());
+            //Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.ITransport transport = 
+            //    Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.TransportFactory.CreateTransport("Bike");
 
-            Console.WriteLine(new Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.Bike().GetType().ToString());
-            Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.ITransport transport = 
-                Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.TransportFactory.CreateTransport("Bike");
-
-            transport.Drive();
+            //transport.Drive();
 
             //transport = Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.TransportFactory.CreateTransport("Scooter");
             //transport.Drive();
 
+            //------------------------------------------------------------------------------------
 
             Console.ReadLine();
-
         }
     }
 }
