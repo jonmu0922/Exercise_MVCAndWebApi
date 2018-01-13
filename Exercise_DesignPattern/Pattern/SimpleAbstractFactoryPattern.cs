@@ -40,19 +40,17 @@ namespace Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern
 
     class TransportFactory
     {
-        private static readonly string AssemblyName = "Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern";
+        private static readonly string AssemblyName = "Exercise_DesignPattern, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null";
 
         public static ITransport CreateTransport(string classname)
         {
             // 先找出 Assembly FullName
             //Debug.WriteLine((typeof(ITransport).Assembly).FullName); 
             // output => Exercise_DesignPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-            
-            string assemblyname = "Exercise_DesignPattern, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null";
-
+                       
             classname = "Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern" + "." + classname;
 
-            return (ITransport)Assembly.Load(assemblyname).CreateInstance(classname);          
+            return (ITransport)Assembly.Load(AssemblyName).CreateInstance(classname);          
         }
     }
 }

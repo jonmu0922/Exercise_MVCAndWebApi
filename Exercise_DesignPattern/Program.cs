@@ -1,5 +1,6 @@
 ﻿using Exercise_DesignPattern.Pattern;
 using Exercise_DesignPattern.Pattern.Decorator;
+using Exercise_DesignPattern.Pattern.Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace Exercise_DesignPattern
 
             //簡單抽象工廠模式 Simple Abstract Factory Pattern
             //Console.WriteLine(new Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.Bike().GetType().ToString());
-            //Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.ITransport transport = 
+            //Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.ITransport transport =
             //    Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.TransportFactory.CreateTransport("Bike");
 
             //transport.Drive();
@@ -64,21 +65,37 @@ namespace Exercise_DesignPattern
             //------------------------------------------------------------------------------------
             // 裝飾者模式
 
-            Food t1 = new Toast();
+            //Food t1 = new Toast();
 
-            Console.WriteLine(t1.Description() + "$" + t1.Cost());
+            //Console.WriteLine(t1.Description() + "$" + t1.Cost());
 
-            Food t2 = new Toast();
-            t2 = new Egg(t2);
+            //Food t2 = new Toast();
+            //t2 = new Egg(t2);
 
-            Console.WriteLine(t2.Description() + "$" + t2.Cost());
+            //Console.WriteLine(t2.Description() + "$" + t2.Cost());
 
-            Food t3 = new Toast();
-            t3 = new Egg(t3);
-            t3 = new Bacon(t3);
+            //Food t3 = new Toast();
+            //t3 = new Egg(t3);
+            //t3 = new Bacon(t3);
 
-            Console.WriteLine(t3.Description() + "$" + t3.Cost());
+            //Console.WriteLine(t3.Description() + "$" + t3.Cost());
 
+            //------------------------------------------------------------------------------------
+            // 觀察者模式
+
+            //NewspaperOffice newspaper = new NewspaperOffice();
+
+            //Customer c1 = new Customer("C1");
+            //Customer c2 = new Customer("C2");
+
+            //newspaper.SubscribeNewspaper(c1);
+            //newspaper.SubscribeNewspaper(c2);
+
+            //newspaper.SendNewspaper("Hello world");
+
+            //newspaper.RemoveObserver(c1);
+
+            //newspaper.SendNewspaper("Hello world2");
             //------------------------------------------------------------------------------------
 
             Console.ReadLine();

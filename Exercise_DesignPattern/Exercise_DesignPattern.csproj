@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pattern\Decorator.cs" />
+    <Compile Include="Pattern\Observer.cs" />
     <Compile Include="Pattern\SimpleAbstractFactoryPattern.cs" />
     <Compile Include="Pattern\FactoryMethod.cs" />
     <Compile Include="Pattern\SimpleFactory.cs" />
