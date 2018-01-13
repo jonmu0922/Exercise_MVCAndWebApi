@@ -1,4 +1,5 @@
 ﻿using Exercise_DesignPattern.Pattern;
+using Exercise_DesignPattern.Pattern.Decorator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,18 +51,35 @@ namespace Exercise_DesignPattern
             //transport = Exercise_DesignPattern.Pattern.SimpleAbstractFactoryPattern.TransportFactory.CreateTransport("Scooter");
             //transport.Drive();
 
-            //------------------------------------------------------------------------------------
-
-            //------------------------------------------------------------------------------------
+            //------------------------------------------------------------------------------------            
 
             //Singleton
 
-            var s1 = Singleton.Instance();
-            var s2 = Singleton.Instance();
+            //var s1 = Singleton.Instance();
+            //var s2 = Singleton.Instance();
 
-            if (s1 == s2)
-                Console.WriteLine("the same");
+            //if (s1 == s2)
+            //    Console.WriteLine("the same");
 
+            //------------------------------------------------------------------------------------
+            // 裝飾者模式
+
+            Food t1 = new Toast();
+
+            Console.WriteLine(t1.Description() + "$" + t1.Cost());
+
+            Food t2 = new Toast();
+            t2 = new Egg(t2);
+
+            Console.WriteLine(t2.Description() + "$" + t2.Cost());
+
+            Food t3 = new Toast();
+            t3 = new Egg(t3);
+            t3 = new Bacon(t3);
+
+            Console.WriteLine(t3.Description() + "$" + t3.Cost());
+
+            //------------------------------------------------------------------------------------
 
             Console.ReadLine();
         }
