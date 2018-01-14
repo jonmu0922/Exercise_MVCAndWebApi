@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Exercise_DesignPattern.Pattern.Observer
 {
     /*
-    觀察者模式模式 
+    觀察者模式 
     Observer Pattern
 
     https://dotblogs.com.tw/joysdw12/2013/03/13/96531
