@@ -1,4 +1,5 @@
 ﻿using Exercise_DesignPattern.Pattern;
+using Exercise_DesignPattern.Pattern.AbstractFactory;
 using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Observer;
 using System;
@@ -96,6 +97,15 @@ namespace Exercise_DesignPattern
             //newspaper.RemoveObserver(c1);
 
             //newspaper.SendNewspaper("Hello world2");
+            //------------------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------------------
+
+            IFactory factory = new SqlServerFactory();
+            IUser user = factory.CreateUser();
+
+            user.InsertUser("jon");
+
             //------------------------------------------------------------------------------------
 
             Console.ReadLine();

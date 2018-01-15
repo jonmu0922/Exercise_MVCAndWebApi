@@ -5,11 +5,15 @@ Creational pattern
 
 > 處理「產生 object」。主要的目的有二，一是希望封裝 concrete class，二是想封裝「如何產生並結合 concrete class 的 instance」的過程。
 
-* Abstract Factory (抽象工廠)
+* Abstract Factory (抽象工廠) [done]
+    > 對於資料的存取，我們希望實現多資料庫，不侷限於某一個資料庫。
+    > 可衍伸出 SimplyFactory、Simple Abstract Factory 的改進
 * Builder
 * Factory Method (工廠方法) [done]
+  > 綠茶工廠生產綠茶，紅茶工廠生產紅茶
 * Prototype
 * Singleton (單例模式) [done]
+  > 系統中某項資源只能有一個，使用這個設計，可以確保物件個體只有一個。 
 
 Structural pattern
 
