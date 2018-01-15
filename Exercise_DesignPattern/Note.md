@@ -1,6 +1,8 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
+##### 進度 6/23
+
 Creational pattern
 
 > 處理「產生 object」。主要的目的有二，一是希望封裝 concrete class，二是想封裝「如何產生並結合 concrete class 的 instance」的過程。
@@ -46,10 +48,8 @@ Behavior pattern
 * Visitor
 
 # Reference
-很多C#範例參考 [連結](http://www.dofactory.com/net/design-patterns)
-
-MarkDown 語法參考 [連結](http://markdown.tw/)
-
-Design Pattern Overview [連結](http://www.cjwind.idv.tw/Design-Pattern-Overview/)
+- 很多C#範例參考 [連結](http://www.dofactory.com/net/design-patterns)
+- MarkDown 語法參考 [連結](http://markdown.tw/)
+- Design Pattern Overview [連結](http://www.cjwind.idv.tw/Design-Pattern-Overview/)
 
 
