@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 6/23
+##### 進度 7/23
 
 Creational pattern
 
@@ -13,7 +13,9 @@ Creational pattern
 * Builder
 * Factory Method (工廠方法) [done]
   > 綠茶工廠生產綠茶，紅茶工廠生產紅茶
-* Prototype
+* Prototype (原型模式) [done]
+  > 淺複製：複製所有欄位，參考型別只複製參考。
+  > 深複製：建立新的物件
 * Singleton (單例模式) [done]
   > 系統中某項資源只能有一個，使用這個設計，可以確保物件個體只有一個。 
 
