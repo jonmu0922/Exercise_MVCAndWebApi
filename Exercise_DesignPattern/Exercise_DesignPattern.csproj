@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pattern\AbstractFactory.cs" />
+    <Compile Include="Pattern\Bridge.cs" />
+    <Compile Include="Pattern\Builder.cs" />
     <Compile Include="Pattern\Decorator.cs" />
     <Compile Include="Pattern\Observer.cs" />
     <Compile Include="Pattern\Prototype.cs" />

@@ -1,5 +1,7 @@
 ﻿using Exercise_DesignPattern.Pattern;
 using Exercise_DesignPattern.Pattern.AbstractFactory;
+using Exercise_DesignPattern.Pattern.Bridge;
+using Exercise_DesignPattern.Pattern.Builder;
 using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
@@ -110,45 +112,70 @@ namespace Exercise_DesignPattern
             //------------------------------------------------------------------------------------
             // Prototype
 
-            Resume r1 = new Resume() { Name = "jon", Age = 28};
-            r1.SetWork(new DateTime(1900, 1, 1),"abc");            
+            //Resume r1 = new Resume() { Name = "jon", Age = 28};
+            //r1.SetWork(new DateTime(1900, 1, 1),"abc");            
 
-            Resume r2 = (Resume)r1.Clone();
+            //Resume r2 = (Resume)r1.Clone();
 
-            r2.Name = "jon2";
-            r2.Age = 29;
-            r2.SetWork(new DateTime(2000, 1, 1), "def");            
+            //r2.Name = "jon2";
+            //r2.Age = 29;
+            //r2.SetWork(new DateTime(2000, 1, 1), "def");            
 
-            Resume r3 = (Resume)r1.Clone();
+            //Resume r3 = (Resume)r1.Clone();
 
-            r3.Name = "jon3";
-            r3.Age = 30;
-            r3.SetWork(new DateTime(2001, 1, 1), "def");
+            //r3.Name = "jon3";
+            //r3.Age = 30;
+            //r3.SetWork(new DateTime(2001, 1, 1), "def");
 
-            r1.Display();
-            r2.Display();
-            r3.Display();
+            //r1.Display();
+            //r2.Display();
+            //r3.Display();
 
-            Console.WriteLine("");
+            //Console.WriteLine("");
 
-            Resume_Deep r4 = new Resume_Deep() { Name = "jon4", Age = 28 };
-            r4.SetWork(new DateTime(1900, 1, 1), "abc");
+            //Resume_Deep r4 = new Resume_Deep() { Name = "jon4", Age = 28 };
+            //r4.SetWork(new DateTime(1900, 1, 1), "abc");
 
-            Resume_Deep r5 = (Resume_Deep)r4.Clone();
+            //Resume_Deep r5 = (Resume_Deep)r4.Clone();
 
-            r5.Name = "jon5";
-            r5.Age = 29;
-            r5.SetWork(new DateTime(2000, 1, 1), "def");
+            //r5.Name = "jon5";
+            //r5.Age = 29;
+            //r5.SetWork(new DateTime(2000, 1, 1), "def");
 
-            Resume_Deep r6 = (Resume_Deep)r4.Clone();
+            //Resume_Deep r6 = (Resume_Deep)r4.Clone();
 
-            r6.Name = "jon6";
-            r6.Age = 30;
-            r6.SetWork(new DateTime(2001, 1, 1), "def");
+            //r6.Name = "jon6";
+            //r6.Age = 30;
+            //r6.SetWork(new DateTime(2001, 1, 1), "def");
 
-            r4.Display();
-            r5.Display();
-            r6.Display();
+            //r4.Display();
+            //r5.Display();
+            //r6.Display();
+
+            //------------------------------------------------------------------------------------
+            // Builder
+
+            //VehicleBuilder builder;
+
+            //// Create shop with vehicle builders
+            //Shop shop = new Shop();
+
+            //// Construct and display vehicles          
+            //builder = new CarBuilder();
+            //shop.Construct(builder);
+            //builder.Vehicle.Show();
+
+            //builder = new MotorCycleBuilder();
+            //shop.Construct(builder);
+            //builder.Vehicle.Show();
+
+            //------------------------------------------------------------------------------------
+            // Bridge 
+            ConcreteLog log1 = new ConcreteLog(new DefaultConsoleOutput());
+            ConcreteLog log2 = new ConcreteLog(new ColorfulConsoleOutput());
+
+            log1.WriteLog("log1");
+            log2.WriteLog("log2");
 
             //------------------------------------------------------------------------------------
 
