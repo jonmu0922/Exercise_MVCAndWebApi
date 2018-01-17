@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 10/23
+##### 進度 11/23
 
 Creational pattern
 
@@ -45,7 +45,9 @@ Structural pattern
   > 插頭兩孔轉三孔
 * Bridge (橋接模式) [done]    
     > 將抽象與實作解耦合，使他們都可以獨立地變化。
-* Composite
+* Composite (組合模式)[done]
+    > 數個物件之間，呈現一種樹狀結構。物件之間可以組合。
+    > => 樹狀目錄選單
 * Decorator (裝飾者模式) [done]
   > 早餐店 -> 吐司和配料
 * Facade

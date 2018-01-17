@@ -3,6 +3,7 @@ using Exercise_DesignPattern.Pattern.AbstractFactory;
 using Exercise_DesignPattern.Pattern.Adapter;
 using Exercise_DesignPattern.Pattern.Bridge;
 using Exercise_DesignPattern.Pattern.Builder;
+using Exercise_DesignPattern.Pattern.Composite;
 using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
@@ -180,11 +181,29 @@ namespace Exercise_DesignPattern
 
             //------------------------------------------------------------------------------------
             // Adapter
-            PowerAdapter p1 = new PowerAdapter();
-            PowerAdapter2 p2 = new PowerAdapter2();
+            //PowerAdapter p1 = new PowerAdapter();
+            //PowerAdapter2 p2 = new PowerAdapter2();
 
-            p1.Request();
-            p2.Request();
+            //p1.Request();
+            //p2.Request();
+
+            //------------------------------------------------------------------------------------
+            // Composite
+
+            CompositeMenu root = new CompositeMenu("公司");
+
+            CompositeMenu office1 = new CompositeMenu("第一處");
+            office1.Add(new CompositeMenu("第一科"));
+            office1.Add(new CompositeMenu("第二科"));
+            CompositeMenu office2 = new CompositeMenu("第二處");
+            office2.Add(new CompositeMenu("第四科"));
+            office2.Add(new CompositeMenu("第五科"));
+            office2.Add(new CompositeMenu("第六科"));
+
+            root.Add(office1);
+            root.Add(office2);
+
+            root.Display();
 
             //------------------------------------------------------------------------------------
 
