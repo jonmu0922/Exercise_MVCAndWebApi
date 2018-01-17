@@ -1,5 +1,6 @@
 ﻿using Exercise_DesignPattern.Pattern;
 using Exercise_DesignPattern.Pattern.AbstractFactory;
+using Exercise_DesignPattern.Pattern.Adapter;
 using Exercise_DesignPattern.Pattern.Bridge;
 using Exercise_DesignPattern.Pattern.Builder;
 using Exercise_DesignPattern.Pattern.Decorator;
@@ -171,11 +172,19 @@ namespace Exercise_DesignPattern
 
             //------------------------------------------------------------------------------------
             // Bridge 
-            ConcreteLog log1 = new ConcreteLog(new DefaultConsoleOutput());
-            ConcreteLog log2 = new ConcreteLog(new ColorfulConsoleOutput());
+            //ConcreteLog log1 = new ConcreteLog(new DefaultConsoleOutput());
+            //ConcreteLog log2 = new ConcreteLog(new ColorfulConsoleOutput());
 
-            log1.WriteLog("log1");
-            log2.WriteLog("log2");
+            //log1.WriteLog("log1");
+            //log2.WriteLog("log2");
+
+            //------------------------------------------------------------------------------------
+            // Adapter
+            PowerAdapter p1 = new PowerAdapter();
+            PowerAdapter2 p2 = new PowerAdapter2();
+
+            p1.Request();
+            p2.Request();
 
             //------------------------------------------------------------------------------------
 

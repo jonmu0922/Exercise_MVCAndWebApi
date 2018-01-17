@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 9/23
+##### 進度 10/23
 
 Creational pattern
 
@@ -38,7 +38,11 @@ Structural pattern
 
 > 可以合成 class 跟 object 到更大的結構中。
 
-* Adapter
+* Adapter (適配器模式) [done]
+  > 通過轉換已經存在類別的接口以適應而不改變它。
+  > Adapter分成兩種：繼承 (Class way)、組合 (Object way)
+  
+  > 插頭兩孔轉三孔
 * Bridge (橋接模式) [done]    
     > 將抽象與實作解耦合，使他們都可以獨立地變化。
 * Composite
