@@ -46,7 +46,8 @@ namespace Exercise_MVCAndWebApi.Controllers
 
                 // 再檢查一次
                 if (!this.ModelState.IsValid)
-                {                    
+                {
+                    // result ={"Status":false,"Message":{"Account":["帳號未輸入"],"Password":["密碼未輸入"],"Email":["Email未輸入"]}}
                     return Json(
                         new
                         {
@@ -55,7 +56,14 @@ namespace Exercise_MVCAndWebApi.Controllers
                                 .ToDictionary(k => k.Key, k => k.Value.Errors.Select(e => e.ErrorMessage).ToArray())
                         }                        
                     );
-                }                    
+
+                    // result = {"Status":false,"Message":["帳號未輸入","密碼未輸入","Email未輸入"]}
+                    //return Json(new
+                    //{
+                    //    Status = false,
+                    //    Message = ModelState.Where(x => x.Value.Errors.Count > 0).Select(o => o.Value.Errors.First().ErrorMessage).ToArray()
+                    //});
+                }
             }
 
             return Json(new { Status = true});
