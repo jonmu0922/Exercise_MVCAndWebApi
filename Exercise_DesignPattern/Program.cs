@@ -208,11 +208,58 @@ namespace Exercise_DesignPattern
 
             //------------------------------------------------------------------------------------
             // Facade
-            HomeFacade facade = new HomeFacade();
+            //HomeFacade facade = new HomeFacade();
 
-            facade.ArriveHome();
-            facade.LeaveHome();
+            //facade.ArriveHome();
+            //facade.LeaveHome();
 
+            //------------------------------------------------------------------------------------
+            // FlyWeight
+
+            Random random = new Random();
+            PokerFactory factory = new PokerFactory();
+
+            for (int i = 0; i < 10; i++)
+            {
+                //先決定花色               
+                Card card = null;
+                switch(random.Next(0, 4))
+                {
+                    case 0:
+                        card = factory.GetCard(PokerEnum.Spade);
+                        break;
+                    case 1:
+                        card = factory.GetCard(PokerEnum.Heart);
+                        break;
+                    case 2:
+                        card = factory.GetCard(PokerEnum.Clud);
+                        break;
+                    case 3:
+                        card = factory.GetCard(PokerEnum.Diamond);
+                        break;
+                }
+
+                if (card != null)
+                {
+                    int num = random.Next(1, 14);
+                    switch (num)
+                    {
+                        case 11:
+                            card.ShowCard("J");
+                            break;
+                        case 12:
+                            card.ShowCard("Q");
+                            break;
+                        case 13:
+                            card.ShowCard("K");
+                            break;
+                        default:
+                            card.ShowCard(num.ToString());
+                            break;                       
+                    }
+                }
+
+            }
             //------------------------------------------------------------------------------------
 
             Console.ReadLine();
