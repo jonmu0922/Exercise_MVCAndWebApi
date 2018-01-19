@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 11/23
+##### 進度 12/23
 
 Creational pattern
 
@@ -49,8 +49,9 @@ Structural pattern
     > 數個物件之間，呈現一種樹狀結構。物件之間可以組合。
     > => 樹狀目錄選單
 * Decorator (裝飾者模式) [done]
-  > 早餐店 -> 吐司和配料
-* Facade
+    > 早餐店 -> 吐司和配料
+* Facade (外觀模式) [done]
+    >  主要是將眾多Class重新包裝成一個更好用的Class => 控制多台電器的遙控器    
 * Flyweight
 * Proxy
 
