@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 13/23
+##### 進度 14/23
 
 Creational pattern
 
@@ -54,7 +54,8 @@ Structural pattern
     >  主要是將眾多Class重新包裝成一個更好用的Class => 控制多台電器的遙控器    
 * Flyweight (享元模式) [done]
     > 可在儲存和取出共用的物件、狀態等資訊。目的在於減少頻繁建立物件所消耗的資源 => 撲克牌遊戲(只要建立四個花色物件)
-* Proxy
+* Proxy (代理模式) [done]
+    > 為其他物件提供一種代理以控制對這個物件的存取。
 
 Behavior pattern
 > 重點在 class 與 object 間的互動，以及各自的責任。
