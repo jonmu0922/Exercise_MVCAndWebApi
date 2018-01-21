@@ -263,12 +263,24 @@ namespace Exercise_DesignPattern
             //}
             //------------------------------------------------------------------------------------
             // Prox
-            MathProxy proxy = new MathProxy();
+            //MathProxy proxy = new MathProxy();
 
-            proxy.Add(1, 3);
-            proxy.Dev(1, 3);
-            proxy.Mul(1, 3);
-            proxy.Sub(1, 3);          
+            //proxy.Add(1, 3);
+            //proxy.Dev(1, 3);
+            //proxy.Mul(1, 3);
+            //proxy.Sub(1, 3);          
+
+            //------------------------------------------------------------------------------------
+            // command
+
+            Exercise_DesignPattern.Pattern.Command.Light lamp = new Exercise_DesignPattern.Pattern.Command.Light();
+            Exercise_DesignPattern.Pattern.Command.ICommand switchUp = new Exercise_DesignPattern.Pattern.Command.FlipUpCommand(lamp);
+            Exercise_DesignPattern.Pattern.Command.ICommand switchDown = new Exercise_DesignPattern.Pattern.Command.FlipDownCommand(lamp);
+
+            Exercise_DesignPattern.Pattern.Command.Switch s = new Exercise_DesignPattern.Pattern.Command.Switch();
+
+            s.StoreAndExecute(switchUp);
+            s.StoreAndExecute(switchDown);
 
             //------------------------------------------------------------------------------------
 

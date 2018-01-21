@@ -61,7 +61,7 @@ Behavior pattern
 > 重點在 class 與 object 間的互動，以及各自的責任。
 
 * Chain of Responsibility
-* Command
+* Command (命令模式)
 * Interpreter
 * Iterator
 * Mediator
