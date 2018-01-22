@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 14/23
+##### 進度 16/23
 
 Creational pattern
 
@@ -61,8 +61,14 @@ Behavior pattern
 > 重點在 class 與 object 間的互動，以及各自的責任。
 
 * Chain of Responsibility
-* Command (命令模式)
-* Interpreter
+* Command (命令模式) [done]
+    > 它嘗試以物件來代表實際行動。命令物件可以把行動(action) 及其參數封裝起來，於是這些行動可以被：
+    > - 重複多次
+    > - 取消（如果該物件有實作的話）
+    > - 取消後又再重做
+* Interpreter (解釋器模式) [done]
+    > 用來解釋、直譯一種語言的方法
+    > -> 數字轉國字
 * Iterator
 * Mediator
 * Memento
