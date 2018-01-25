@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 14/23
+##### 進度 15/23
 
 Creational pattern
 
@@ -61,7 +61,7 @@ Behavior pattern
 > 重點在 class 與 object 間的互動，以及各自的責任。
 
 * Chain of Responsibility
-* Command (命令模式)
+* Command (命令模式) [done]
 * Interpreter
 * Iterator
 * Mediator
