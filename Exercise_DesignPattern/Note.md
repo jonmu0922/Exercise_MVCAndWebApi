@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 15/23
+##### 進度 16/23
 
 Creational pattern
 
@@ -62,7 +62,13 @@ Behavior pattern
 
 * Chain of Responsibility
 * Command (命令模式) [done]
-* Interpreter
+    > 它嘗試以物件來代表實際行動。命令物件可以把行動(action) 及其參數封裝起來，於是這些行動可以被：
+    > - 重複多次
+    > - 取消（如果該物件有實作的話）
+    > - 取消後又再重做
+* Interpreter (解釋器模式) [done]
+    > 用來解釋、直譯一種語言的方法
+    > -> 數字轉國字
 * Iterator
 * Mediator
 * Memento

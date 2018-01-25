@@ -6,6 +6,7 @@ using Exercise_DesignPattern.Pattern.Builder;
 using Exercise_DesignPattern.Pattern.Composite;
 using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Facade;
+using Exercise_DesignPattern.Pattern.Interpreter;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
 using Exercise_DesignPattern.Pattern.Proxy;
@@ -273,14 +274,24 @@ namespace Exercise_DesignPattern
             //------------------------------------------------------------------------------------
             // command
 
-            Exercise_DesignPattern.Pattern.Command.Light lamp = new Exercise_DesignPattern.Pattern.Command.Light();
-            Exercise_DesignPattern.Pattern.Command.ICommand switchUp = new Exercise_DesignPattern.Pattern.Command.FlipUpCommand(lamp);
-            Exercise_DesignPattern.Pattern.Command.ICommand switchDown = new Exercise_DesignPattern.Pattern.Command.FlipDownCommand(lamp);
+            //Exercise_DesignPattern.Pattern.Command.Light lamp = new Exercise_DesignPattern.Pattern.Command.Light();
+            //Exercise_DesignPattern.Pattern.Command.ICommand switchUp = new Exercise_DesignPattern.Pattern.Command.FlipUpCommand(lamp);
+            //Exercise_DesignPattern.Pattern.Command.ICommand switchDown = new Exercise_DesignPattern.Pattern.Command.FlipDownCommand(lamp);
 
-            Exercise_DesignPattern.Pattern.Command.Switch s = new Exercise_DesignPattern.Pattern.Command.Switch();
+            //Exercise_DesignPattern.Pattern.Command.Switch s = new Exercise_DesignPattern.Pattern.Command.Switch();
 
-            s.StoreAndExecute(switchUp);
-            s.StoreAndExecute(switchDown);
+            //s.StoreAndExecute(switchUp);
+            //s.StoreAndExecute(switchDown);
+
+            //------------------------------------------------------------------------------------
+            //Interpreter
+            Context context = new Context() { Text = "0123456789" };
+
+            TranslateUpperChinese upper = new TranslateUpperChinese();            
+            Console.WriteLine(upper.Interpret(context));
+
+            TranslateLowerChinese lower = new TranslateLowerChinese();
+            Console.WriteLine(lower.Interpret(context));
 
             //------------------------------------------------------------------------------------
 
