@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 16/23
+##### 進度 17/23
 
 Creational pattern
 
@@ -69,8 +69,11 @@ Behavior pattern
 * Interpreter (解釋器模式) [done]
     > 用來解釋、直譯一種語言的方法
     > -> 數字轉國字
-* Iterator
-* Mediator
+* Iterator (迭代器模式) [done]
+    >  迭代器提供一種方法來逐一訪問對象的元素，而不暴露其結構。 
+* Mediator (中介者模式) 
+    > 當物件和物件之間或有錯綜複雜的交互作用，可將這些關係交由另一物件(中介者)來處理，
+以減少這些物件間的耦合。
 * Memento
 * Observer (觀察者模式) [done] 
 	> 報社 -> 訂報者

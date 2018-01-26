@@ -7,6 +7,7 @@ using Exercise_DesignPattern.Pattern.Composite;
 using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Facade;
 using Exercise_DesignPattern.Pattern.Interpreter;
+using Exercise_DesignPattern.Pattern.Iterator;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
 using Exercise_DesignPattern.Pattern.Proxy;
@@ -285,13 +286,20 @@ namespace Exercise_DesignPattern
 
             //------------------------------------------------------------------------------------
             //Interpreter
-            Context context = new Context() { Text = "0123456789" };
+            //Context context = new Context() { Text = "0123456789" };
 
-            TranslateUpperChinese upper = new TranslateUpperChinese();            
-            Console.WriteLine(upper.Interpret(context));
+            //TranslateUpperChinese upper = new TranslateUpperChinese();            
+            //Console.WriteLine(upper.Interpret(context));
 
-            TranslateLowerChinese lower = new TranslateLowerChinese();
-            Console.WriteLine(lower.Interpret(context));
+            //TranslateLowerChinese lower = new TranslateLowerChinese();
+            //Console.WriteLine(lower.Interpret(context));
+
+            //------------------------------------------------------------------------------------
+            // Iterator
+            DaysOfTheWeek days = new DaysOfTheWeek();
+            
+            foreach (var d in days)
+                Console.WriteLine(d);
 
             //------------------------------------------------------------------------------------
 
