@@ -8,6 +8,8 @@ using Exercise_DesignPattern.Pattern.Decorator;
 using Exercise_DesignPattern.Pattern.Facade;
 using Exercise_DesignPattern.Pattern.Interpreter;
 using Exercise_DesignPattern.Pattern.Iterator;
+using Exercise_DesignPattern.Pattern.Mediator;
+using Exercise_DesignPattern.Pattern.Memento;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
 using Exercise_DesignPattern.Pattern.Proxy;
@@ -296,11 +298,50 @@ namespace Exercise_DesignPattern
 
             //------------------------------------------------------------------------------------
             // Iterator
-            DaysOfTheWeek days = new DaysOfTheWeek();
-            
-            foreach (var d in days)
-                Console.WriteLine(d);
+            //DaysOfTheWeek days = new DaysOfTheWeek();
 
+            //foreach (var d in days)
+            //    Console.WriteLine(d);
+
+            //------------------------------------------------------------------------------------
+            // Mediator
+
+            //Chatroom chatroom = new Chatroom();
+
+            //Participant p1 = new Participant("p1");
+            //Participant p2 = new Participant("p2");
+            //Participant p3 = new Beatle("p3");
+
+            //chatroom.Register(p1);
+            //chatroom.Register(p2);
+            //chatroom.Register(p3);
+
+            //p1.Send("p2", "hello p2");
+            //p2.Send("p3", "hello p3");
+
+            //------------------------------------------------------------------------------------
+            //Memento
+
+            List<ContactPerson> persons = new List<ContactPerson>
+            {
+                new ContactPerson() { Name = "aaa", MobileNum = "11111" },
+                new ContactPerson() { Name = "bbb", MobileNum = "22222" },
+                new ContactPerson() { Name = "ccc", MobileNum = "22222" }
+            };
+
+            MobileOwner owner = new MobileOwner(persons);
+
+            ContactMemento memento = owner.CreateMemento();
+
+            owner.Show();
+
+            owner.ContactPersons.RemoveAt(1);
+
+            owner.Show();
+
+            owner.RestoreMemento(memento);
+
+            owner.Show();
             //------------------------------------------------------------------------------------
 
             Console.ReadLine();

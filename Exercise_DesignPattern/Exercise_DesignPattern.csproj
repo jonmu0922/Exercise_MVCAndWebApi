@@ -54,6 +54,7 @@
     <Compile Include="Pattern\Interpreter.cs" />
     <Compile Include="Pattern\Iterator.cs" />
     <Compile Include="Pattern\Mediator.cs" />
+    <Compile Include="Pattern\Memento.cs" />
     <Compile Include="Pattern\Observer.cs" />
     <Compile Include="Pattern\Prototype.cs" />
     <Compile Include="Pattern\Proxy.cs" />
