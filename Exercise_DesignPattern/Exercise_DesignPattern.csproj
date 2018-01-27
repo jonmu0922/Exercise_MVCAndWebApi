@@ -62,6 +62,7 @@
     <Compile Include="Pattern\FactoryMethod.cs" />
     <Compile Include="Pattern\SimpleFactory.cs" />
     <Compile Include="Pattern\Singleton.cs" />
+    <Compile Include="Pattern\State.cs" />
     <Compile Include="Pattern\Strategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

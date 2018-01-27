@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 19/23
+##### 進度 20/23
 
 Creational pattern
 
@@ -81,7 +81,9 @@ Behavior pattern
     > 在不破壞封裝的前提下，捕獲一個物件的內部狀態，並在該物件之外儲存這個狀態，這樣以後就可以把該物件恢復到原先的狀態。 
 * Observer (觀察者模式) [done] 
 	> 報社 -> 訂報者
-* State 	
+* State (狀態模式) [done]
+    >  當一個物件的行為取決於它的狀態，而且必須在執行時刻根據狀態改變它的行為時，就可以考慮使用狀態模式
+    >  取代多個 if elseif else 的應用 	
 * Strategy (策略模式) [done] 
     > 購物車
 * Template Method

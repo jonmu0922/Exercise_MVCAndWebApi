@@ -13,6 +13,7 @@ using Exercise_DesignPattern.Pattern.Memento;
 using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
 using Exercise_DesignPattern.Pattern.Proxy;
+using Exercise_DesignPattern.Pattern.State;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -322,26 +323,43 @@ namespace Exercise_DesignPattern
             //------------------------------------------------------------------------------------
             //Memento
 
-            List<ContactPerson> persons = new List<ContactPerson>
-            {
-                new ContactPerson() { Name = "aaa", MobileNum = "11111" },
-                new ContactPerson() { Name = "bbb", MobileNum = "22222" },
-                new ContactPerson() { Name = "ccc", MobileNum = "22222" }
-            };
+            //List<ContactPerson> persons = new List<ContactPerson>
+            //{
+            //    new ContactPerson() { Name = "aaa", MobileNum = "11111" },
+            //    new ContactPerson() { Name = "bbb", MobileNum = "22222" },
+            //    new ContactPerson() { Name = "ccc", MobileNum = "22222" }
+            //};
 
-            MobileOwner owner = new MobileOwner(persons);
+            //MobileOwner owner = new MobileOwner(persons);
 
-            ContactMemento memento = owner.CreateMemento();
+            //ContactMemento memento = owner.CreateMemento();
 
-            owner.Show();
+            //owner.Show();
 
-            owner.ContactPersons.RemoveAt(1);
+            //owner.ContactPersons.RemoveAt(1);
 
-            owner.Show();
+            //owner.Show();
 
-            owner.RestoreMemento(memento);
+            //owner.RestoreMemento(memento);
 
-            owner.Show();
+            //owner.Show();
+            //------------------------------------------------------------------------------------
+            // State
+
+            Player user = new Player();
+
+            user.level = 1; // 玩家等級
+            user.stateWork(); // 玩家狀態處理
+
+            user.level = 20;
+            user.stateWork();
+
+            user.level = 62;
+            user.stateWork();
+
+            user.level = 93;
+            user.stateWork();
+
             //------------------------------------------------------------------------------------
 
             Console.ReadLine();
