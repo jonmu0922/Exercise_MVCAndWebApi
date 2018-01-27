@@ -14,6 +14,8 @@ using Exercise_DesignPattern.Pattern.Observer;
 using Exercise_DesignPattern.Pattern.Prototype;
 using Exercise_DesignPattern.Pattern.Proxy;
 using Exercise_DesignPattern.Pattern.State;
+using Exercise_DesignPattern.Pattern.TemplateMethod;
+using Exercise_DesignPattern.Pattern.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -346,19 +348,67 @@ namespace Exercise_DesignPattern
             //------------------------------------------------------------------------------------
             // State
 
-            Player user = new Player();
+            //Player user = new Player();
 
-            user.level = 1; // 玩家等級
-            user.stateWork(); // 玩家狀態處理
+            //user.level = 1; // 玩家等級
+            //user.stateWork(); // 玩家狀態處理
 
-            user.level = 20;
-            user.stateWork();
+            //user.level = 20;
+            //user.stateWork();
 
-            user.level = 62;
-            user.stateWork();
+            //user.level = 62;
+            //user.stateWork();
 
-            user.level = 93;
-            user.stateWork();
+            //user.level = 93;
+            //user.stateWork();
+
+            //------------------------------------------------------------------------------------
+            // TemplateMethod
+
+            //DataAccessObject daoCategories = new Categories();
+            //daoCategories.Run();
+
+            //DataAccessObject daoProducts = new Products();
+            //daoProducts.Run();
+
+            //------------------------------------------------------------------------------------
+            // Visitor
+
+            //CompanyStructure structure = new CompanyStructure();
+
+            //Chairman chairman = new Chairman("Chairman");
+            //Manager manager = new Manager("Manager");
+
+            //structure.Elements.Add(chairman);
+            //structure.Elements.Add(manager);
+
+            //Visitor salary = new Salary();
+
+            //structure.Accept(salary);
+
+            //------------------------------------------------------------------------------------
+
+            // 管理者初始化
+            Exercise_DesignPattern.Pattern.Chain.Manager manager = new Exercise_DesignPattern.Pattern.Chain.Manager("阿福"); // 經理
+            Exercise_DesignPattern.Pattern.Chain.Director director = new Exercise_DesignPattern.Pattern.Chain.Director("技安"); // 協理
+            Exercise_DesignPattern.Pattern.Chain.GeneralManager generalmanager = new Exercise_DesignPattern.Pattern.Chain.GeneralManager("宜靜"); // 總經理
+            manager.SetUpManager(director); // 設定經理的上級為協理
+            director.SetUpManager(generalmanager); // 設定協理的上級為總經理
+
+            Exercise_DesignPattern.Pattern.Chain.LeaveRequest leaveRequest = new Exercise_DesignPattern.Pattern.Chain.LeaveRequest(); // 假單
+            leaveRequest.Name = "大雄"; // 員工姓名
+
+            leaveRequest.DayNum = 1; // 請假天數
+            manager.RequestPersonalLeave(leaveRequest);// 送出1天的假單
+
+            leaveRequest.DayNum = 3; // 請假天數
+            manager.RequestPersonalLeave(leaveRequest);// 送出3天的假單
+
+            leaveRequest.DayNum = 7; // 請假天數
+            manager.RequestPersonalLeave(leaveRequest);// 送出7天的假單
+
+            leaveRequest.DayNum = 10; // 請假天數
+            manager.RequestPersonalLeave(leaveRequest);// 送出10天的假單
 
             //------------------------------------------------------------------------------------
 

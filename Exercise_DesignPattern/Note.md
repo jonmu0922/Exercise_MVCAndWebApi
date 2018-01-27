@@ -1,7 +1,7 @@
 ﻿# Design Pattern
 ### Design Pattern 分類
 
-##### 進度 20/23
+##### 進度 23/23
 
 Creational pattern
 
@@ -60,7 +60,9 @@ Structural pattern
 Behavior pattern
 > 重點在 class 與 object 間的互動，以及各自的責任。
 
-* Chain of Responsibility
+* Chain of Responsibility (責任鏈模式) [done]
+    > 有幾個物件都能處理某種請求，但處理的能範圍(權限)不同，當這個物件沒有處理的權限時，能夠將這個請求，傳遞給下一個物件繼續處理。
+    > -> 請假天數核決天數權限不同
 * Command (命令模式) [done]
     > 它嘗試以物件來代表實際行動。命令物件可以把行動(action) 及其參數封裝起來，於是這些行動可以被：
     > - 重複多次
@@ -86,9 +88,12 @@ Behavior pattern
     >  取代多個 if elseif else 的應用 	
 * Strategy (策略模式) [done] 
     > 購物車
-* Template Method
-* Visitor
+* Template Method (模板方法) [done]
+    > 定義了一個演算法的步驟，並允許次類別為一個或多個步驟提供其實踐方式。讓次類別在不改變演算法架構的情況下，重新定義演算法中的某些步驟。
 
+    > Template Method Pattern是基於繼承的代碼複用的基本技術，Template Method Pattern的結構和用法也是物件導向設計的核心。
+* Visitor (訪問者模式) [done]
+    > 當一個「物件結構」中的「元素」幾乎不會異動，但這些「元素的行為」常會增減，則適合用訪問者模式。
 分類表
 
 >Class: Class與其Sub-Class之間的關係，為靜態作用

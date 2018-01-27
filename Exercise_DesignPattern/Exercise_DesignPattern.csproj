@@ -46,6 +46,7 @@
     <Compile Include="Pattern\Adapter.cs" />
     <Compile Include="Pattern\Bridge.cs" />
     <Compile Include="Pattern\Builder.cs" />
+    <Compile Include="Pattern\Chain.cs" />
     <Compile Include="Pattern\Command.cs" />
     <Compile Include="Pattern\Composite.cs" />
     <Compile Include="Pattern\Decorator.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="Pattern\Singleton.cs" />
     <Compile Include="Pattern\State.cs" />
     <Compile Include="Pattern\Strategy.cs" />
+    <Compile Include="Pattern\TemplateMethod.cs" />
+    <Compile Include="Pattern\Visitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
