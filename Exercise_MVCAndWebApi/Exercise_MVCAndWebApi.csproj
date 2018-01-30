@@ -139,7 +139,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Class\Filter\LogFilter.cs" />
+    <Compile Include="Class\Filter\MVCLogFilter.cs" />
     <Compile Include="Class\Helper\LogHelper.cs" />
     <Compile Include="Class\Helper\StringHelper.cs" />
     <Compile Include="Controllers\ActionResultTestController.cs" />

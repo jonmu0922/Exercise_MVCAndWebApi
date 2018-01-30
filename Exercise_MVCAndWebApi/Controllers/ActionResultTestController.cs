@@ -31,7 +31,7 @@ namespace Exercise_MVCAndWebApi.Controllers
             return View();
         }
 
-        [LogFilter]
+        [MVCLogFilter]
         public ActionResult TxtContent(string Name)
         {
             if(ViewBag.Confirm != null)

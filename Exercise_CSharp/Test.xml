@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AD>
+  <Title DataType="string" IsRequired="true">主標題</Title>
+  <SubTitle DataType="string" IsRequired="true">次標題</SubTitle>
+  <Introduction DataType="textarea" IsRequired="true" >說明</Introduction>
+  <FilePath DataType="file" FileType="jpeg,jpg,gif,png,bmp" Width="200" Height="200" IsRequired="true">顯示檔案</FilePath>
+  <LinkUrl DataType="url" IsRequired="true" IsOpenBlank="true">連結網址</LinkUrl>
+  <LinkUrlOpenBlank DataType="bool" IsRequired="true">是否另開視窗</LinkUrlOpenBlank>
+  <TopPosition DataType="int" IsRequired="true" DefaultValue="200">顯示高度</TopPosition>
+</AD>
+
+
