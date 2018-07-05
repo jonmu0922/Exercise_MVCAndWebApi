@@ -31,13 +31,15 @@ namespace Exercise_MVCAndWebApi.Controllers
             return View();
         }
 
-        [LogFilter]
+        [MVCLogFilter]
         public ActionResult TxtContent(string Name)
         {
-            if(ViewBag.Confirm != null)
-                return Content(Name + " " + ViewBag.Confirm);
 
-            return Content(Name);
+            //if(ViewBag.Confirm != null)
+            //    return Content(Name + " " + ViewBag.Confirm);
+
+            //return Content(Name);
+            return Content("{name:'"+ Name +"',isconfirm:"+ ((ViewBag.Confirm != null) ? ViewBag.Confirm : "false") + "}", "application/json");
         }
 
         public ActionResult Empty()

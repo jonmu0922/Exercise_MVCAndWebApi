@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 namespace Exercise_MVCAndWebApi.Class.Filter
 {
-    public class LogFilter : FilterAttribute, IAuthorizationFilter
+    public class MVCLogFilter : FilterAttribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationContext filterContext)       
         {
