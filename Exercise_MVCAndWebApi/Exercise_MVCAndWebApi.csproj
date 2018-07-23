@@ -151,6 +151,7 @@
     <Compile Include="Class\Helper\LogHelper.cs" />
     <Compile Include="Class\Helper\StringHelper.cs" />
     <Compile Include="Controllers\ActionResultTestController.cs" />
+    <Compile Include="Controllers\api\ApiTestController.cs" />
     <Compile Include="Controllers\api\EFTestController.cs" />
     <Compile Include="Controllers\AsyncTestController.cs" />
     <Compile Include="Controllers\AuthTestController.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="Controllers\HtmlHelperTestController.cs" />
     <Compile Include="Controllers\AjaxHelperTestController.cs" />
     <Compile Include="Controllers\FormTestController.cs" />
+    <Compile Include="Controllers\VueController.cs" />
     <Compile Include="EF\Product.cs" />
     <Compile Include="EF\SysUser.cs" />
     <Compile Include="EF\TestContext.cs" />
@@ -184,6 +186,7 @@
     <Content Include="Views\AuthTest\Index.cshtml" />
     <Content Include="Views\AuthTest\CheckAuth.cshtml" />
     <Content Include="Views\AsyncTest\Dapper.cshtml" />
+    <Content Include="Views\Vue\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

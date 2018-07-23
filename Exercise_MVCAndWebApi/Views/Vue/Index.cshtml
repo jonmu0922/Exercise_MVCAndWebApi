@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="name" /><input type="button" value="submit" v-on:click="submit" />
+        <input v-model="age" /><input type="button" value="submit2" v-on:click="submit2" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                name: 'jon',
+                age:'20'
+            },
+            methods: {
+                submit: function () {
+                    axios.post('../api/apitest/PostName', '=' + this.name)
+                    .then(function (response) {
+                        alert(response.data);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                },
+                submit2: function () {
+                    axios.post('../api/apitest/PostNameAge', { Name: this.name, Age: this.age })
+                        .then(function (response) {
+                            alert(response.data);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
