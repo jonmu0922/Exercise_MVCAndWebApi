@@ -21,13 +21,18 @@ namespace Exercise_MVCAndWebApi.Controllers.api
         [HttpPost]
         public HttpResponseMessage PostName([FromBody]string name)
         {
+            // ref:https://hk.saowen.com/a/59887711bd30ac639247aec2e5c794143d1c3f5a72832c5084917749cd7a9075
+            // 單一參數 webapi post
+            // js post 過來要加上 = 
+            //  axios.post('../api/apitest/PostName', '=' + this.name)
             return Request.CreateResponse(HttpStatusCode.OK, "hello " + name);
         }
 
         [HttpPost]
         public HttpResponseMessage PostNameAge(Temp temp)
         {
-            // webapi 使用class 來做binding 是最建議的方法
+            // 多參數 webapi post
+            // 使用class 來做binding 是最建議的方法
             string result = "";
             result += "hello " + temp.Name;
             result += temp.Age + "year old";
