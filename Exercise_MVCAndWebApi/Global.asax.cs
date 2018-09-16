@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using Exercise_MVCAndWebApi.Class;
 
 namespace Exercise_MVCAndWebApi
 {
@@ -17,7 +18,10 @@ namespace Exercise_MVCAndWebApi
             // 應用程式啟動時執行的程式碼
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //GlobalConfiguration.Configuration.MessageHandlers.Add(
+            //   new SwaggerAccessMessageHandler());
         }
     }
 }

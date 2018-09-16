@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Exercise_MVCAndWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Exercise_MVCAndWebApi.Class.Helper.StringHelper.StringToISO_8859_1(System.String)">
+            <summary>
+            转换为ISO_8859_1
+            </summary>
+            <param name="srcText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Exercise_MVCAndWebApi.Class.Helper.StringHelper.ISO_8859_1ToString(System.String)">
+            <summary>
+            转换为原始字符串
+            </summary>
+            <param name="srcText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Exercise_MVCAndWebApi.Controllers.AuthTestController.Logout">
+            <summary>
+            登出
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
