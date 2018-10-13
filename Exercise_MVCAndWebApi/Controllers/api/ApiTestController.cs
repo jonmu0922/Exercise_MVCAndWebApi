@@ -2,9 +2,11 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web.Hosting;
 using System.Web.Http;
 
 namespace Exercise_MVCAndWebApi.Controllers.api
@@ -38,6 +40,63 @@ namespace Exercise_MVCAndWebApi.Controllers.api
             result += temp.Age + "year old";
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage ProcessTest()
+        {
+            // http://localhost:57683/api/apitest/ProcessTest
+            // http://localhost/Exercise_MVCAndWebApi/api/apitest/ProcessTest
+
+            //Process.Start("IExplore.exe");
+            //System.Diagnostics.Process.Start("notepad.exe", "jonmu");
+
+            //string path = "C:\\Windows\\System32\\notepad.exe";
+            //ProcessStartInfo psi = new ProcessStartInfo();
+            //psi.UseShellExecute = true;
+            //psi.LoadUserProfile = true;
+            //psi.WorkingDirectory = path;
+            //psi.FileName = path;
+
+            //Process.Start(psi);
+
+            //string strFilePath = HostingEnvironment.MapPath("~/app_data/test.bat");
+
+
+            //System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe");
+            //psi.Arguments = "/c " + strFilePath;
+
+            //psi.UseShellExecute = false;
+            ////psi.UseShellExecute = true;
+            //System.Diagnostics.Process proc = System.Diagnostics.Process.Start(psi);
+
+
+
+            //Process.Start(strFilePath);
+
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+            //startInfo.CreateNoWindow = false;
+            //startInfo.UseShellExecute = false;
+
+            //startInfo.FileName = strFilePath;
+            //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            //var processStartInfo = new ProcessStartInfo();
+            //processStartInfo.WorkingDirectory = @"C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn";
+            //processStartInfo.FileName = "ssms.exe";
+            //processStartInfo.RedirectStandardOutput = true;
+            //processStartInfo.RedirectStandardInput = true;
+            //processStartInfo.UseShellExecute = false;
+
+            //// set additional properties     
+            //Process proc = Process.Start(processStartInfo);
+            ////proc.StandardInput.WriteLine("myExe.exe myargs1 myargs2 myargs3 ");
+            ////// add this line to prevent your asp.net code die in the console
+            ////proc.WaitForExit(5000);
+
+            //System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe");
+
+            return Request.CreateResponse(HttpStatusCode.OK, "test");
         }
     }
 
