@@ -51,17 +51,18 @@ namespace Exercise_MVCAndWebApi.Controllers.api
             //Process.Start("IExplore.exe");
             //System.Diagnostics.Process.Start("notepad.exe", "jonmu");
 
-            //string path = "C:\\Windows\\System32\\notepad.exe";
-            //ProcessStartInfo psi = new ProcessStartInfo();
-            //psi.UseShellExecute = true;
-            //psi.LoadUserProfile = true;
-            //psi.WorkingDirectory = path;
-            //psi.FileName = path;
+
 
             //Process.Start(psi);
 
-            //string strFilePath = HostingEnvironment.MapPath("~/app_data/test.bat");
+            string strFilePath = HostingEnvironment.MapPath("~/app_data/test.bat");
 
+            string path = "C:\\Windows\\System32\\notepad.exe";
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.UseShellExecute = true;
+            psi.LoadUserProfile = true;
+            psi.WorkingDirectory = strFilePath;
+            psi.FileName = path;
 
             //System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe");
             //psi.Arguments = "/c " + strFilePath;
