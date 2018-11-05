@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_DesignPattern", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_CSharp", "Exercise_CSharp\Exercise_CSharp.csproj", "{936EE54B-78E3-4217-828A-9FB4E84A9E26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_Reflection", "Exercise_Reflection\Exercise_Reflection.csproj", "{3991BD72-D803-468D-83AE-1AA8401E5089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{936EE54B-78E3-4217-828A-9FB4E84A9E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{936EE54B-78E3-4217-828A-9FB4E84A9E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{936EE54B-78E3-4217-828A-9FB4E84A9E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3991BD72-D803-468D-83AE-1AA8401E5089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3991BD72-D803-468D-83AE-1AA8401E5089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3991BD72-D803-468D-83AE-1AA8401E5089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3991BD72-D803-468D-83AE-1AA8401E5089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
