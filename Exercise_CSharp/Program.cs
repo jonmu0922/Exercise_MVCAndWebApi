@@ -12,10 +12,25 @@ namespace Exercise_CSharp
     {
         static void Main(string[] args)
         {
+            DateTime now = DateTime.Now.AddSeconds(3600);
+
+            int timeStamp = Convert.ToInt32(
+                now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds
+            );
+
+            Console.WriteLine(timeStamp);
+
+            DateTime gtm = (new DateTime(1970, 1, 1)).AddSeconds(Convert.ToInt32(timeStamp));
+
+            Console.WriteLine(gtm);
+            
+            Console.ReadKey();
+
+            /*
             ZipHelper.ZipDir(@"D:\Deploy\temp\", @"D:\Deploy\test.zip");
 
             Console.ReadKey();
-
+            */
             /*
             ADHelper adhelper = new ADHelper();
 

@@ -54,6 +54,7 @@
     <Compile Include="Class\AD\TextADField.cs" />
     <Compile Include="Class\AD\BaseADField.cs" />
     <Compile Include="Class\Helper\FileHelper.cs" />
+    <Compile Include="Class\Helper\TimeHelper.cs" />
     <Compile Include="Class\Helper\ZipHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
